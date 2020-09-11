@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { CountryLookupComponent } from './country-lookup.component';
+import { CountryLookupService } from '../shared/country-lookup.service';
 
 describe('CountryLookupComponent', () => {
   let component: CountryLookupComponent;
@@ -8,9 +9,10 @@ describe('CountryLookupComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ CountryLookupComponent ]
+      providers: [{ provide: CountryLookupService, useValue: {}}],
+      declarations: [CountryLookupComponent]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {
