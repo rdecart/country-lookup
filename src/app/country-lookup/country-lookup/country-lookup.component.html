@@ -1,0 +1,5 @@
+<app-country-lookup-form (countryCodeChangeEvent)="handleCountryCode($event)"></app-country-lookup-form>
+<br>
+<app-country-lookup-result [details]="countryDetails" [countryCode]="countryCode"></app-country-lookup-result>
+<div *ngIf="failState === CountryFailureReason.NOT_FOUND">Failed to find country matching: {{ countryCode }}</div>
+<div *ngIf="failState === CountryFailureReason.UNKNOWN || error">Unexpected Error</div>

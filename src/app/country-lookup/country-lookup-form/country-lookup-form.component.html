@@ -1,0 +1,11 @@
+<form (ngSubmit)="onSubmit()" class="form-inline pt-4">
+    <div class="form-group">
+        <label for="code" class="mr-2">Country Code</label>
+        <input type="text" class="form-control mr-2" id="code" required [ngModel]="code.value"
+            (ngModelChange)="codeChangeEvent($event)" name="code">
+        <button type="submit" class="btn btn-success" [disabled]="!code.valid">Lookup</button>
+    </div>
+</form>
+<div [hidden]="code.valid || code.pristine" class="alert alert-danger mt-2">
+    Please enter 2 or 3 letter country code
+</div>

@@ -1,0 +1,25 @@
+<ng-container *ngIf="details">
+    <p>Result for "{{ countryCode }}"</p>
+    <table class="table">
+        <tr>
+            <th>Country Name</th>
+            <td>{{ details.name }}</td>
+        </tr>
+        <tr>
+            <th>Region</th>
+            <td>{{ details.region.value }}</td>
+        </tr>
+        <tr>
+            <th>Capital City</th>
+            <td>{{ details.capitalCity }}</td>
+        </tr>
+        <tr>
+            <th>Longitude</th>
+            <td>{{ details.longitude }}</td>
+        </tr>
+        <tr>
+            <th>Latitude</th>
+            <td>{{ details.latitude }}</td>
+        </tr>
+    </table>
+</ng-container>
