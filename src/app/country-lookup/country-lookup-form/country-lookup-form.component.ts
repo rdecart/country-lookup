@@ -13,7 +13,7 @@ export class CountryLookupFormComponent {
 
   constructor() { }
 
-  public codeChangeEvent(code: string): void {
+  public codeChange(code: string): void {
     const valid = /^[a-zA-Z]{2,3}$/.test(code);
     this.code = { value: code, valid, pristine: false };
   }
